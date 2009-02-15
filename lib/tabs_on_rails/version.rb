@@ -24,7 +24,7 @@ module TabsOnRails
     STRING = [MAJOR, MINOR, TINY].join('.')
   end
 
-  VERSION         = Version::STRING
+  VERSION         = nil # Version::STRING
   STATUS          = 'development'
   BUILD           = '$Id$'.match(/(\d+)/).to_a.first
 
