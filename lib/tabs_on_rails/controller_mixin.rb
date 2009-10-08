@@ -123,7 +123,7 @@ module TabsOnRails
         tabs  = Tabs.new(self, { :namespace => :default }.merge(options))
 
         concat(tabs.open_tabs.to_s)
-        yield  tabs
+        yield  tabs if current_tab?(options[:namespace]) || options[:namespace].blank? 
         concat(tabs.close_tabs.to_s)
       end
 
